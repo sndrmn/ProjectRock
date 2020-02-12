@@ -17,7 +17,7 @@
          $local_hostname = exec("curl http://$url./latest/meta-data/local-hostname/");
          $local_ipv4 = exec("curl http://$url./latest/meta-data/local-ipv4/");
          echo nl2br("<strong>This VM is running in AWS</strong> \n\n <strong> INSTANCE ID:</strong> \n$instance_id \n\n<strong>AVAILABILITY ZONE:</strong> \n$reg_az \n\n<strong>PUBLIC HOSTNAME:</strong> \n$public_hostname \n\n<strong>PUBLIC IP:</strong> \n$public_ipv4 \n\n<strong>LOCAL HOSTNAME:</strong> \n$local_hostname \n\n<strong>PRIVATE IP:</strong> \n$local_ipv4");
-         return $reg_az;
+         return $reg_az
          }
    }  
  }
