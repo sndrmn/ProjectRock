@@ -29,7 +29,7 @@
             <div class="content">
                 <div class="inner">
                     <h1>Be humble Be Hungry <br>And always be the hardest <br> worker in the room</h1>
-                    <p>Dwayne 'The Sander' Johnson </p>
+                    <p>Dwayne 'The Sander2' Johnson </p>
                 </div>
             </div>
             <nav>
