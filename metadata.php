@@ -12,7 +12,7 @@
                $rgname = exec("curl -H Metadata:true \"http://$url./metadata/instance/compute/resourceGroupName?api-version=2017-08-01&format=text\"");
                echo nl2br("<strong>This VM is running in Azure</strong> \n\n <strong>VM Name:</strong> \n$name \n\n <strong>Location:</strong> \n$location \n\n <strong>Public IP:</strong> \n$public_ip \n\n<strong>PRIVATE IP:</strong> \n$private_ip \n\n <strong>RESOURCE GROUP:</s$
            } else {
-               $instance_id = exec("curl http://$url./latest/meta-data/instance-id");
+               $instance_id = exec(curl http://$url./latest/meta-data/instance-id");
                $reg_az = exec("curl http://$url./latest/meta-data/placement/availability-zone/");
                $public_hostname = exec("curl http://$url./latest/meta-data/public-hostname/");
                $public_ipv4 = exec("curl http://$url./latest/meta-data/public-ipv4/");
