@@ -10,7 +10,7 @@
                $public_ip = exec("curl -H Metadata:true \"http://$url./metadata/instance/network/interface/0/ipv4/ipAddress/0/publicIpAddress?api-version=2017-08-01&format=text\"");
                $private_ip = exec("curl -H Metadata:true \"http://$url./metadata/instance/network/interface/0/ipv4/ipAddress/0/privateIpAddress?api-version=2017-08-01&format=text\"");
                $rgname = exec("curl -H Metadata:true \"http://$url./metadata/instance/compute/resourceGroupName?api-version=2017-08-01&format=text\"");
-               echo nl2br("<strong>This VM is running in Azure</strong> \n\n <strong>VM Name:</strong> \n$name \n\n <strong>Location:</strong> \n$location \n\n <strong>Public IP:</strong> \n$public_ip \n\n<strong>PRIVATE IP:</strong> \n$private_ip \n\n <strong>RESOURCE GROUP:</s$
+               echo nl2br("<strong>This VM is running in Azure</strong> \n\n <strong>VM Name:</strong> \n$name \n\n <strong>Location:</strong> \n$location \n\n <strong>Public IP:</strong> \n$public_ip \n\n<strong>PRIVATE IP:</strong> \n$private_ip \n\n <strong>RESOURCE GROUP:</strong> \n $rgname");
            } else {
               $instance_id = exec("curl http://$url./latest/meta-data/instance-id");
               $reg_az = exec("curl http://$url./latest/meta-data/placement/availability-zone/");
