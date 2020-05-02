@@ -2,7 +2,7 @@
  class metadata
  {
    public function metadata_query($url){
-     $pingresult = exec("bin/ping -n 3 $url", $outcome, $status);
+     $curlresult = exec("curl -m 3 http://$url", $outcome, $status);
      if (0 == $status) {
          $location = exec("curl -H Metadata:true \"http://$url./metadata/instance/compute/location?api-version=2019-03-11&format=text\"");
            if ($location == 'australiaeast' Or $location == 'southeastasia'){
