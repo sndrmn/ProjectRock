@@ -1,7 +1,7 @@
 
 <!DOCTYPE HTML>
 <!--
-	Dimension by HTML5 UP-Testing
+	Dimension by HTML5 UP! Cmon Work
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
