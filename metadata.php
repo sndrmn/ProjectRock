@@ -22,10 +22,9 @@
               return $reg_az;
            }
      } else {
-         $private_ip = $_SERVER['SERVER_ADDR'];
          $local_hostname = gethostname();
          $vmtools = exec("vmware-toolbox-cmd -v");
-         echo nl2br("<strong>This VM is running On-Prem </strong> \n\n <strong> PRIVATE IP:</strong> \n$private_ip \n\n <strong> HOSTNAME: </strong> \n $local_hostname \n\n <strong>VMTOOLS: </strong> \n $vmtools");
+         echo nl2br("<strong>This VM is running On-Prem </strong> \n\n <strong> HOSTNAME: </strong> \n $local_hostname \n\n <strong>VMTOOLS: </strong> \n $vmtools");
          $onprem = "VMware";
          return $onprem;
      }
