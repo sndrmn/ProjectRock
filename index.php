@@ -1,7 +1,7 @@
 
 <!DOCTYPE HTML>
 <!--
-	Dimension by HTML5 UP! Change
+	Dimension by HTML5 UP!
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
@@ -29,7 +29,7 @@
             <div class="content">
                 <div class="inner">
                     <h1>Be humble Be Hungry <br>And always be the hardest <br> worker in the room</h1>
-                    <p>EQL Demo Day</p>
+                    <p>Dwayne "The Rock" Johnson</p>
                 </div>
             </div>
             <nav>
