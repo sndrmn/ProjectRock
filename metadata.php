@@ -24,7 +24,8 @@
      } else {
          $local_hostname = gethostname();
          $vmtools = exec("vmware-toolbox-cmd -v");
-         echo nl2br("<strong>This VM is running On-Prem </strong> \n\n <strong> HOSTNAME: </strong> \n $local_hostname \n\n <strong>VMTOOLS: </strong> \n $vmtools");
+         $serverip = $_SERVER['SERVER_ADDR'];
+         echo nl2br("<strong>This VM is running On-Prem </strong> \n\n <strong> IP ADDRESS: </strong> \n $serverip \n\n <strong> HOSTNAME: </strong> \n $local_hostname \n\n <strong>VMTOOLS: </strong> \n $vmtools");
          $onprem = "VMware";
          return $onprem;
      }
