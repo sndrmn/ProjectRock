@@ -6,7 +6,13 @@
 
   $conn = new PDO("sqlsrv:server = tcp:$ep,1433; Database = $db", "$un", "$pa");
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $result_str = strtoupper($ep);  
+  $verquery = "SELECT @@VERSION";
+  $stmt = $conn->query($verquery);
+  $version = $stmt-> fetchAll();
+  foreach( $version as $ver ) {
+   $temp4 = substr($ver[0],0,51);
+   echo nl2br("<strong>$temp4</strong> \n");
+  }
   
   if(isset($_POST['Year2'])) { 
    $temp = $_REQUEST['Year'];
