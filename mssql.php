@@ -1,5 +1,5 @@
 <?php
-  $ep = "windowsmongodb.vmware.education";
+  $ep = "windows.vmware.education";
   $db = "prod";
   $un = "projectrockread";
   $pa = "readme123#";
