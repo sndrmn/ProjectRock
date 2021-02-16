@@ -1,8 +1,9 @@
 <?php
+    $user = getenv('MONGOUSER');
+    $pass = getenv('MONGOPASS');
+    $mongo = new MongoDB\Driver\Command("mongodb://$user:$pass@mongodb.vmware.education:27017/RockMovies");
+
     if(isset($_POST['Year2'])) { 
-        $user = getenv('MONGOUSER');
-        $pass = getenv('MONGOPASS');
-        $mongo = new MongoDB\Driver\Manager("mongodb://$user:$pass@mongodb.vmware.education:27017/RockMovies");
         $filter = [ 'Year' => $_REQUEST['Year'] ];
         $query = new MongoDB\Driver\Query($filter);
         $res = $mongo->executeQuery("RockMovies.movies", $query);
@@ -22,9 +23,6 @@
     } 
     if(isset($_POST['Title2'])) { 
         $new = '^'.$_REQUEST['Title'];
-        $user = getenv('MONGOUSER');
-        $pass = getenv('MONGOPASS');
-        $mongo = new MongoDB\Driver\Manager("mongodb://$user:$pass@mongodb.vmware.education:27017/RockMovies");
         $query = new MongoDB\Driver\Query( array('Title' => new MongoDB\BSON\Regex( $new, 'i' ) ) );
         $res = $mongo->executeQuery("RockMovies.movies", $query);
         $movie = $res->toArray();
