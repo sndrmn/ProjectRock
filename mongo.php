@@ -1,7 +1,7 @@
 <?php
     $user = getenv('MONGOUSER');
     $pass = getenv('MONGOPASS');
-    $mongo = new MongoDB\Driver\Command("mongodb://$user:$pass@mongodb.vmware.education:27017/RockMovies");
+    $mongo = new MongoDB\Driver\Manager("mongodb://$user:$pass@mongodb.vmware.education:27017/RockMovies");
 
     if(isset($_POST['Year2'])) { 
         $filter = [ 'Year' => $_REQUEST['Year'] ];
