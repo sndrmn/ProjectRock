@@ -29,7 +29,7 @@
             <div class="content">
                 <div class="inner">
                     <h1>Be humble Be Hungry <br>And always be the hardest <br> worker in the room</h1>
-                    <p>Dwayne "DXC" Johnson</p>
+                    <p>Dwayne "The Rock" Johnson</p>
                 </div>
             </div>
             <nav>
