@@ -21,7 +21,7 @@
               $local_hostname = gethostname();
               $OS = php_uname();
               $WebServer = $_SERVER['SERVER_SOFTWARE'];
-              $local_ipv4 = exec("curl http://$url./latest/meta-data/local-ipv4/");
+              $local_ipv4 = exec("curl http://$url/latest/meta-data/local-ipv4/");
               echo nl2br("<strong>This VM is running in AWS</strong> \n\n <strong> INSTANCE ID:</strong> \n$instance_id \n\n<strong>PRIVATE IP:</strong> \n$local_ipv4 \n\n<strong>HOSTNAME:</strong> \n$local_hostname \n\n<strong>OS VERSION:</strong> \n$OS \n\n<strong>WEB SOFTWARE:</strong> \n$WebServer \n\n<strong>AVAILABILITY ZONE:</strong> \n$reg_az \n\n<strong>PUBLIC IP:</strong> \n$public_ipv4 ");
               return $reg_az;
            }
