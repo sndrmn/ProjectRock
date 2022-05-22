@@ -88,6 +88,7 @@
                 <h2 class="major">Metadata</h2>
                 <span class="image main"><img src="images/therock2.jpg" alt="" /></span>
                 <p>
+		<button onClick="window.location.reload();">Refresh Page</button><br><br>
                 <?php 
                   $url = "169.254.169.254";
                   include("metadata.php");
