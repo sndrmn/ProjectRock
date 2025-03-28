@@ -69,8 +69,8 @@
             <article id="movies">
                 <h2 class="major">Rock Movies</h2>
                 <span class="image main"><img src="images/movies.jpg" alt="" /></span>
-                <?php 
-                include("mongo.php");
+                <?php
+        
                 ?>
                 <br><br>
                 <form method="post"> 
